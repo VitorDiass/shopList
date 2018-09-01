@@ -20,7 +20,7 @@ npm-debug.log*
 .versions/
 coverage/
 dist/
-src/config.ts
+src/app/config.ts
 node_modules/
 tmp/
 temp/
@@ -30,7 +30,6 @@ plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
-app/config.ts
 
 .DS_Store
 Thumbs.db
