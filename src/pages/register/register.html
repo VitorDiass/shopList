@@ -1,7 +1,7 @@
- <ion-header>
-    <ion-navbar hideBackButton="true">
+<ion-header>
+    <ion-navbar>
         <ion-title>
-            Login
+            Register
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -17,10 +17,9 @@
             <ion-label floating>Password</ion-label>
             <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
         </ion-item>
-        <button ion-button (click)="login()">Login</button>
+        <button ion-button (click)="register()">Register</button>
     </ion-list>
 
     
-    <a (click)="goToRegister()">Not registered yet?</a>
 
 </ion-content>

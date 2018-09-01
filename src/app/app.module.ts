@@ -7,7 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { config } from '../config'; 
+import { RegisterPage} from '../pages/register/register';
+
+import { AlertsComponent } from '../utils/alertController';
+import { config } from './config'; 
+
+
+import { AuthenticationService } from '../authentication/authentication.service';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -21,7 +27,9 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    RegisterPage
+
   ],
   imports: [
     BrowserModule,
@@ -34,13 +42,18 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    RegisterPage,
+    //AlertsComponent
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AlertsComponent,
+    AuthenticationService
   ]
 })
 export class AppModule {}
