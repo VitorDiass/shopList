@@ -4,6 +4,7 @@ import { AuthenticationService } from '../../authentication/authentication.servi
 import { RegisterPage } from '../register/register';
 import { UserData } from '../data'; 
 import { AlertsComponent } from '../../utils/alertController';
+import { MainPage } from '../main/main';
 
  
 @Component({
@@ -27,7 +28,7 @@ export class LoginPage{
 
     this.afAuth.signEmail(this.userData).then(
       () =>{
-      let buttons = [{text : 'OK', handler : () => {  this.navCtrl.push(RegisterPage)}}]
+      let buttons = [{text : 'OK', handler : () => {  this.navCtrl.push(MainPage)}}]
       this.alert.alertControllerCreate("Login",buttons,"","Login com sucesso")
       }
     ),

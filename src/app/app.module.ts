@@ -8,6 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage} from '../pages/register/register';
+import { MainPage } from '../pages/main/main';
+import { ListPage } from '../pages/list/list';
+import { ProductPage } from '../pages/product/product';
+
 
 import { AlertsComponent } from '../utils/alertController';
 import { config } from './config'; 
@@ -23,12 +27,17 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 
 
 
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    MainPage,
+    ListPage,
+    ProductPage
 
   ],
   imports: [
@@ -44,6 +53,9 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     HomePage,
     LoginPage,
     RegisterPage,
+    MainPage,
+    ListPage,
+    ProductPage
     //AlertsComponent
 
   ],
