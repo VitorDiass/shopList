@@ -12,8 +12,9 @@ import { NavController } from "ionic-angular";
 
 export class MainPage {
 
-    private List : ListPage;
+    List : ListPage;
     private Products : ProductPage;
+    private value : any;
 
     constructor(public navController : NavController){
 

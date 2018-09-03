@@ -15,7 +15,7 @@ import { MainPage } from '../main/main';
 })
 export class LoginPage{
 
-  private userData : UserData = new UserData("","");
+  private userData : UserData = new UserData("v@gmail.com","123456");
 
 
   constructor(public navCtrl: NavController, public afAuth : AuthenticationService, public alert : AlertsComponent) {
@@ -28,8 +28,10 @@ export class LoginPage{
 
     this.afAuth.signEmail(this.userData).then(
       () =>{
-      let buttons = [{text : 'OK', handler : () => {  this.navCtrl.push(MainPage)}}]
-      this.alert.alertControllerCreate("Login",buttons,"","Login com sucesso")
+      // let buttons = [{text : 'OK', handler : () => {  this.navCtrl.push(MainPage)}}]
+      // this.alert.alertControllerCreate("Login",buttons,"","Login com sucesso")
+
+      this.navCtrl.push(MainPage);
       }
     ),
     error => {
